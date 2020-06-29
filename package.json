@@ -1,0 +1,11 @@
+{
+  "name": "leasexpert",
+  "version": "1.0.0",
+  "description": "The only thing here is node-sass",
+  "devDependencies": {
+    "node-sass": "^4.14.0"
+  },
+  "scripts": {
+    "compile-css": "node-sass theme.scss -o ./"
+  }
+}

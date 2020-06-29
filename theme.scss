@@ -1,0 +1,475 @@
+/* Variables */
+$black:  #0A0A0A;
+
+$white: #ffffff;
+
+$gray600: #53565A;
+
+$gray500: #888B8D;
+
+$gray400: #B1B3B3;
+
+$gray300: #D8D8D8;
+
+$gray200: #EDECEB;
+
+$gray100: #FAFAFA;
+
+/* Core */
+$orange: #FF7800;
+
+$blue: #0D9DDB;
+
+$green: #27A167;
+
+$dark-orange: #F36C34;
+
+$purple: #A154A1;
+
+/* Accent */
+
+$orange200: #FFEAD8;
+
+$blue200: #D1E8F1;
+
+$green200: #D9F6E8;
+
+$red: #EA0B23;
+
+$red200: #FFB2BC;
+
+$red100: #FFE5E8;
+
+$purple200: #F5D6F5;
+
+/* Error State */
+
+$error-state: #F4364C;
+
+/* Mixins */
+@mixin typography($color) {
+  font-family: calibri, sans-serif;
+  color: $color;
+}
+
+@mixin focusstate($color) {
+  border: 1px solid $color;
+  box-shadow: 0px 0px 4px $color;
+}
+
+@mixin createButon() {
+  background: $gray100;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+/* Layout System - https://tburleson-layouts-demos.firebaseapp.com/#/docs */
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-between-center {
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.space-between-start {
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+
+.center-center {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.end-center {
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+/* Typography */
+
+/* Headings */
+
+.marketing-headline {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  @include typography($gray600);
+}
+
+h1, .h1 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 42px;
+  @include typography($gray600);
+}
+
+h2, .h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  @include typography($gray600);
+}
+
+h3, .h3 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 32px;
+  @include typography($gray600);
+}
+
+h4, .h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  @include typography($gray600);
+}
+
+h5, .h5 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  @include typography($gray600);
+}
+
+h6, .h6 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  @include typography($gray600);
+}
+
+/* Mobile Headings */
+
+@media screen and (max-width: 600px) {
+  .marketing-headline {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  h1, .h1 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  h2, .h2 {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  h3, .h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  h4, .h4 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  h5, .h5 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+/* Body */
+
+.marketing-paragraph {
+  font-size: 18px;
+  line-height: 27px;
+  @include typography($gray600);
+}
+
+.paragraph-bold {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  @include typography($gray600);
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+  @include typography($gray600);
+}
+
+.paragraph-light {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  @include typography($gray600);
+}
+
+.paragraph-link {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+  @include typography($gray600);
+}
+
+.paragraph-link-visited {
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+  @include typography($dark-orange);
+}
+
+/* Buttons */
+
+.btn {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  @include typography($gray600);
+}
+
+.btn-short {
+  @include createButon();
+  @extend .btn;
+}
+
+.btn-full {
+  @include createButon();
+  @extend .btn;
+  width: 100%;
+}
+
+.primary-btn-short {
+  @extend .btn-short;
+  @extend .blue-background;
+  @extend .white;
+  &:hover {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    @extend .white;
+  }
+  &:focus {
+    box-shadow: 0px 0px 4px #0085CA;
+    @extend .white;
+  }
+}
+
+.primary-btn-full {
+  @extend .btn-full;
+  @extend .blue-background;
+  @extend .white;
+  &:hover {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    @extend .white;
+  }
+  &:focus {
+    box-shadow: 0px 0px 4px $blue;
+    @extend .white;
+  }
+}
+
+.secondary-btn-short {
+  @extend .btn-short;
+  @extend .white-background;
+  @extend .purple;
+  &:hover {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    @extend .purple;
+  }
+  &:focus {
+    box-shadow: 0px 0px 4px $purple;
+    @extend .purple;
+  }
+}
+
+.secondary-btn-full {
+  @extend .btn-full;
+  @extend .white-background;
+  @extend .purple;
+  &:hover {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    @extend .purple;
+  }
+  &:focus {
+    box-shadow: 0px 0px 4px $purple;
+    @extend .purple;
+  }
+}
+
+.nohover {
+  &:hover {
+    box-shadow: none;
+    @extend .purple;
+  }
+  &:focus {
+    box-shadow: none;
+    @extend .purple;
+  }
+}
+
+.btn-label {
+  font-size: 16px;
+  line-height: 20px;
+  @include typography($gray600);
+}
+
+.btn-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  @include typography($gray600);
+}
+
+.btn-help {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  @include typography($gray500);
+}
+
+.btn-border {
+  border: 1px solid $gray400;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Colors */
+
+/* Neutral */
+.black {
+  color: $black;
+}
+
+.white {
+  color: $white;
+}
+
+.white-background {
+  background-color: $white;
+}
+
+.gray600 {
+  color: $gray600;
+}
+
+.gray500 {
+  color: $gray500;
+}
+
+.gray400 {
+  color: $gray400;
+}
+
+.gray300 {
+  color: $gray300;
+}
+
+.gray200 {
+  color: $gray200;
+}
+
+.gray100 {
+  color: $gray100;
+}
+
+/* Core */
+.orange {
+  color: $orange;
+}
+
+.blue {
+  color: $blue;
+}
+
+.blue-background {
+  background-color: $blue;
+}
+
+.green {
+  color: $green;
+}
+
+.dark-orange {
+  color: $dark-orange;
+}
+
+.purple {
+  color: $purple;
+}
+
+.purple-background {
+  background-color: $purple;
+}
+
+/* Accent */
+
+.orange200 {
+  color: $orange200;
+}
+
+.blue200 {
+  color: $blue200;
+}
+
+.green200 {
+  color: $green200;
+}
+
+.red {
+  color: $red;
+}
+
+.red200 {
+  color: $red200;
+}
+
+.red100 {
+  color: $red100;
+}
+
+.purple200 {
+  color: $purple200;
+}
+
+/* Focus State */
+
+.error-state {
+  color: $error-state;
+}
+
+/* Shapes */
+
+.triangle-purple {
+  width: 0px;
+  height: 0px;
+  border-top-width: 175px;
+  border-top-style: solid;
+  border-top-color: transparent;
+  border-right-width: 250px;
+  border-right-style: solid;
+  border-right-color: $purple;
+}
+
+.triangle-purple-offset {
+  opacity: 0.69;
+  position: relative;
+  left: 200px;
+  bottom: 40px;
+}

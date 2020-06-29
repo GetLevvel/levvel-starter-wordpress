@@ -1,0 +1,322 @@
+/* Variables */
+/* Core */
+/* Accent */
+/* Error State */
+/* Mixins */
+/* Layout System - https://tburleson-layouts-demos.firebaseapp.com/#/docs */
+.row {
+  display: flex;
+  flex-direction: row; }
+
+.column {
+  display: flex;
+  flex-direction: column; }
+
+.space-between-center {
+  justify-content: space-between;
+  align-items: center;
+  align-content: center; }
+
+.space-between-start {
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start; }
+
+.center-center {
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+.end-center {
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center; }
+
+/* Typography */
+/* Headings */
+.marketing-headline {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+h1, .h1 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 42px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+h2, .h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+h3, .h3 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 32px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+h4, .h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+h5, .h5 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+h6, .h6 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+/* Mobile Headings */
+@media screen and (max-width: 600px) {
+  .marketing-headline {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px; }
+  h1, .h1 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px; }
+  h2, .h2 {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px; }
+  h3, .h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px; }
+  h4, .h4 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px; }
+  h5, .h5 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px; } }
+
+/* Body */
+.marketing-paragraph {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+.paragraph-bold {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+.paragraph-light {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+.paragraph-link {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+.paragraph-link-visited {
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+  font-family: calibri, sans-serif;
+  color: #F36C34; }
+
+/* Buttons */
+.btn, .btn-short, .primary-btn-short, .secondary-btn-short, .btn-full, .primary-btn-full, .secondary-btn-full {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+.btn-short, .primary-btn-short, .secondary-btn-short {
+  background: #FAFAFA;
+  border-radius: 4px;
+  padding: 8px 16px; }
+
+.btn-full, .primary-btn-full, .secondary-btn-full {
+  background: #FAFAFA;
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 100%; }
+
+.primary-btn-short:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25); }
+
+.primary-btn-short:focus {
+  box-shadow: 0px 0px 4px #0085CA; }
+
+.primary-btn-full:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25); }
+
+.primary-btn-full:focus {
+  box-shadow: 0px 0px 4px #0D9DDB; }
+
+.secondary-btn-short:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25); }
+
+.secondary-btn-short:focus {
+  box-shadow: 0px 0px 4px #A154A1; }
+
+.secondary-btn-full:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25); }
+
+.secondary-btn-full:focus {
+  box-shadow: 0px 0px 4px #A154A1; }
+
+.nohover:hover {
+  box-shadow: none; }
+
+.nohover:focus {
+  box-shadow: none; }
+
+.btn-label {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+.btn-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: calibri, sans-serif;
+  color: #53565A; }
+
+.btn-help {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: calibri, sans-serif;
+  color: #888B8D; }
+
+.btn-border {
+  border: 1px solid #B1B3B3; }
+
+a {
+  text-decoration: none; }
+
+/* Colors */
+/* Neutral */
+.black {
+  color: #0A0A0A; }
+
+.white, .primary-btn-short, .primary-btn-short:hover, .primary-btn-short:focus, .primary-btn-full, .primary-btn-full:hover, .primary-btn-full:focus {
+  color: #ffffff; }
+
+.white-background, .secondary-btn-short, .secondary-btn-full {
+  background-color: #ffffff; }
+
+.gray600 {
+  color: #53565A; }
+
+.gray500 {
+  color: #888B8D; }
+
+.gray400 {
+  color: #B1B3B3; }
+
+.gray300 {
+  color: #D8D8D8; }
+
+.gray200 {
+  color: #EDECEB; }
+
+.gray100 {
+  color: #FAFAFA; }
+
+/* Core */
+.orange {
+  color: #FF7800; }
+
+.blue {
+  color: #0D9DDB; }
+
+.blue-background, .primary-btn-short, .primary-btn-full {
+  background-color: #0D9DDB; }
+
+.green {
+  color: #27A167; }
+
+.dark-orange {
+  color: #F36C34; }
+
+.purple, .secondary-btn-short, .secondary-btn-short:hover, .secondary-btn-short:focus, .secondary-btn-full, .secondary-btn-full:hover, .secondary-btn-full:focus, .nohover:hover, .nohover:focus {
+  color: #A154A1; }
+
+.purple-background {
+  background-color: #A154A1; }
+
+/* Accent */
+.orange200 {
+  color: #FFEAD8; }
+
+.blue200 {
+  color: #D1E8F1; }
+
+.green200 {
+  color: #D9F6E8; }
+
+.red {
+  color: #EA0B23; }
+
+.red200 {
+  color: #FFB2BC; }
+
+.red100 {
+  color: #FFE5E8; }
+
+.purple200 {
+  color: #F5D6F5; }
+
+/* Focus State */
+.error-state {
+  color: #F4364C; }
+
+/* Shapes */
+.triangle-purple {
+  width: 0px;
+  height: 0px;
+  border-top-width: 175px;
+  border-top-style: solid;
+  border-top-color: transparent;
+  border-right-width: 250px;
+  border-right-style: solid;
+  border-right-color: #A154A1; }
+
+.triangle-purple-offset {
+  opacity: 0.69;
+  position: relative;
+  left: 200px;
+  bottom: 40px; }
