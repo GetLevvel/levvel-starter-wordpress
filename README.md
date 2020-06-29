@@ -55,3 +55,6 @@
 * Category support for showing the Category of post
 * Author support showing the author
 * Demo Custom Page Template for expansion
+
+
+*Based on http://html5blank.com*
