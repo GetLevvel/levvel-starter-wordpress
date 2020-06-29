@@ -1,4 +1,4 @@
-# LeaseXpert
+# levvel-starter-wordpress
 
 ## Features
 
